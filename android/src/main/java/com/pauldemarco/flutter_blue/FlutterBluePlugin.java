@@ -1051,7 +1051,9 @@ public class FlutterBluePlugin implements FlutterPlugin, ActivityAware, MethodCa
                 new Runnable() {
                     @Override
                     public void run() {
+                        if (channel != null) {
                         channel.invokeMethod(name, byteArray);
+                        }
                     }
                 });
     }
